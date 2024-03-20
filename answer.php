@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="The Hello World program, in PHP" />
+  <meta name="description" content="The Address program, in PHP" />
   <meta name="keywords" content="mths, icd2o" />
   <meta name="author" content="Manya" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,7 +22,7 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">The Adress program, in PHP</span>
+        <span class="mdl-layout-title">The Address program, in PHP</span>
       </div>
     </header>
     <main class="mdl-layout__content">
@@ -30,23 +30,14 @@
         <img src="./images/street.jpg" alt="street image" width="250" />
       </div>
       <div class="page-content-php">
-        <form action="answer.php" method="POST">
-          <p>Street Name</p>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" name="name">
-            <label class="mdl-textfield__label" for="name-input">Name here ...</label>
-          </div>
-          <br />
-          <p>Street Number</p>
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type=" text" pattern="-?[0-9]*(\.[0-9]+)?" name="number">
-            <label class="mdl-textfield__label" for="age-input">Number here ...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
-          </div>
-          <br />
-          <!-- Accent-colored raised button with ripple -->
-          <input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
-        </form>
+        <div id="user-info">
+          <?php
+          $name = $_POST["name"];
+          $number = $_POST["number"];
+
+          echo "Your info is: " . $name . ", " . $number . ".";
+          ?>
+        </div>
       </div>
     </main>
   </div>
